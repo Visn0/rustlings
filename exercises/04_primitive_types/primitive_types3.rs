@@ -5,10 +5,15 @@
 // Execute `rustlings hint primitive_types3` or use the `hint` watch subcommand
 // for a hint.
 
-// I AM NOT DONE
+fn print_type_of<T>(_: &T) {
+    println!("{}", std::any::type_name::<T>())
+}
 
 fn main() {
-    let a = ???
+    // let a: &[i32] = &[0; 100];
+    let a: [i32; 100] = [0; 100];
+    println!("{}", a.len());
+    print_type_of(&a);
 
     if a.len() >= 100 {
         println!("Wow, that's a big array!");
